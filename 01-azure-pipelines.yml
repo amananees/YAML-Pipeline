@@ -1,5 +1,5 @@
 trigger:
-  master
+  main
 
 pool:
   vmImage: ubuntu-latest
@@ -25,7 +25,7 @@ stages:
         steps:
           - script: this is job3
             displayName: 'running single line script'
-             
+
           
 
 

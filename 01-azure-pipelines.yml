@@ -1,24 +1,31 @@
-
-
 trigger:
   master
+
 pool:
-  vmImage: Ubuntu-latest
+  vmImage: ubuntu-latest
 
 stages:
--stage: Dev
- jobs:
-  -job: Job1
-    steps:
-    - script: echo hello world
-      displayName: 'running a one line script'
-  - job: Job2
-    steps:
-    - script: |
-      echo add tasks to build
-      echo see link
-      echo abcd
-      
-  -job: Job3 
-    steps:
-    -script: bcda
+  - stage: Dev
+    jobs:
+      - job: job1
+        steps:
+          - script: echo hello world
+            displayName: 'running one line script'
+          - script: echo hello ji
+            displayName: 'running one line script'
+
+      - job: job2
+        steps:
+          - script: |
+              echo another work
+              echo abcde
+            displayName: 'running multiple script'
+
+      - job: job3  
+        steps:
+          - script: this is job3
+            displayName: 'running single line script'
+             
+          
+
+

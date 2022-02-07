@@ -1,0 +1,24 @@
+trigger:
+    master
+pool:
+    vmImage: Ubuntu-latest
+
+stages:
+  - stage: Dev
+jobs:
+  -job: Job1
+   steps:
+   - script: echo Hello World!
+     displayName: 'running one line script'
+   - script: echo Hello world from job1!
+     displayName: 'running one line script'
+  -job: Job2
+   steps:
+   -script: |
+    echo Add other task to build
+    echo need attention
+    echo abcdefg
+    displayName: 'running a multi line script'
+  -job: Job3
+  steps:
+  -bash: echo hi from Job3

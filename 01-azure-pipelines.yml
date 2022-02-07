@@ -13,17 +13,15 @@ stages:
             displayName: 'running one line script'
           - script: echo hello ji
             displayName: 'running one line script'
-
       - job: job2
         steps:
           - script: |
               echo another work
               echo abcde
             displayName: 'running multiple script'
-
       - job: job3  
         steps:
-          - bash: this is job3
+        - bash: echo this is from job3
           
 
           

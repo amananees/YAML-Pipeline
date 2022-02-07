@@ -23,8 +23,8 @@ stages:
 
       - job: job3  
         steps:
-          - script: this is job3
-            displayName: 'running single line script'
+          - bash: this is job3
+          
 
           
 
